@@ -1,0 +1,25 @@
+<h3 class="p-3 text-center">List of Users</h3> 
+<button  class = "btn btn-flat-secondary"   (click)="gotoUser()"> Add New User </button>
+<div class="container">
+<div class = "col-md-12">
+<button  class = "btn btn-flat-secondary" > Save </button>
+<button  class = "btn btn-flat-secondary" > Cancel </button>
+</div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.role}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <app-new-user></app-new-user>
+</div>
